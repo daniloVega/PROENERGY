@@ -1,0 +1,44 @@
+{
+	"name": "vega-it-internship-starter",
+	"version": "1.0.0",
+	"description": "VegaIT Front-end Internship Starter",
+	"author": "VegaIT",
+	"main": "webpack.config.js",
+	"scripts": {
+		"build": "webpack --mode development",
+		"prod": "webpack --mode production",
+		"watch": "webpack serve --port 4200"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.25.2",
+		"@babel/preset-env": "^7.25.4",
+		"@vusion/webfonts-generator": "^0.8.0",
+		"autoprefixer": "^10.4.15",
+		"babel-loader": "^9.1.3",
+		"copy-webpack-plugin": "^11.0.0",
+		"css-loader": "^6.8.1",
+		"html-webpack-plugin": "^5.6.0",
+		"mini-css-extract-plugin": "^2.9.1",
+		"postcss": "^8.4.29",
+		"postcss-loader": "^7.3.3",
+		"sass": "^1.77.8",
+		"sass-loader": "^16.0.1",
+		"style-loader": "^4.0.0",
+		"stylelint": "^15.10.3",
+		"stylelint-config-standard-scss": "^11.0.0",
+		"stylelint-webpack-plugin": "^4.1.1",
+		"webfonts-loader": "^8.0.1",
+		"webpack": "^5.88.2",
+		"webpack-bundle-analyzer": "^4.10.2",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.1.0"
+	},
+	"engines": {
+		"node": ">=18.12.1"
+	},
+	"dependencies": {
+		"resolve-url-loader": "^5.0.0"
+	}
+}

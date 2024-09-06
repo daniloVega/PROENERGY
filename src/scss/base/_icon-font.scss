@@ -1,0 +1,49 @@
+@font-face {
+	font-family: "svgicons";
+	font-display: block;
+	src: url("../assets/fonts/svgicons.woff2?87d7502b80f7d943dfb7aff8ba28ff7a") format("woff2"),
+url("../assets/fonts/svgicons.woff?87d7502b80f7d943dfb7aff8ba28ff7a") format("woff"),
+url("../assets/fonts/svgicons.svg?87d7502b80f7d943dfb7aff8ba28ff7a#svgicons") format("svg");
+}
+
+.icon {
+	line-height: 1;
+}
+
+.icon:before {
+	font-family: svgicons !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+.icon-airport:before {
+	content: "\f101";
+}
+.icon-bicycle:before {
+	content: "\f102";
+}
+.icon-car:before {
+	content: "\f103";
+}
+.icon-dog-park:before {
+	content: "\f104";
+}
+.icon-ferry:before {
+	content: "\f105";
+}
+.icon-park:before {
+	content: "\f106";
+}
+.icon-restaurant:before {
+	content: "\f107";
+}
+.icon-rocket:before {
+	content: "\f108";
+}
+.icon-toilets:before {
+	content: "\f109";
+}
+.icon-zoo:before {
+	content: "\f10a";
+}
