@@ -1,0 +1,73 @@
+@use "variables";
+
+// List of spacing values
+$spacings: (
+	0: 0,
+	1: variables.$spacing-10,
+	2: variables.$spacing-20,
+	3: variables.$spacing-30,
+	4: variables.$spacing-40,
+	5: variables.$spacing-50,
+	6: variables.$spacing-60,
+	7: variables.$spacing-70,
+);
+
+// Define responsive breakpoints
+$breakpoints: (
+	sm: variables.$breakpoint-sm,
+	md: variables.$breakpoint-md,
+	lg: variables.$breakpoint-lg,
+	xl: variables.$breakpoint-xl
+);
+
+@mixin padding($property, $size) {
+	#{$property}: $size;
+}
+
+@mixin margin($property, $size) {
+	#{$property}: $size;
+}
+
+@each $key, $value in $spacings {
+	.pt-#{$key} { @include padding(padding-top, $value); }
+	.pl-#{$key} { @include padding(padding-left, $value); }
+	.pr-#{$key} { @include padding(padding-right, $value); }
+	.pb-#{$key} { @include padding(padding-bottom, $value); }
+	.px-#{$key} { @include padding(padding-left, $value); @include padding(padding-right, $value); }
+	.py-#{$key} { @include padding(padding-top, $value); @include padding(padding-bottom, $value); }
+	.p-#{$key}  { @include padding(padding-top, $value); @include padding(padding-right, $value); @include padding(padding-bottom, $value); @include padding(padding-left, $value); }
+}
+
+// Generate margin utilities
+@each $key, $value in $spacings {
+	.mt-#{$key} { @include margin(margin-top, $value); }
+	.mr-#{$key} { @include margin(margin-right, $value); }
+	.mb-#{$key} { @include margin(margin-bottom, $value); }
+	.ml-#{$key} { @include margin(margin-left, $value); }
+	.mx-#{$key} { @include margin(margin-left, $value); @include margin(margin-right, $value); }
+	.my-#{$key} { @include margin(margin-top, $value); @include margin(margin-bottom, $value); }
+	.m-#{$key}  { @include margin(margin-top, $value); @include margin(margin-right, $value); @include margin(margin-bottom, $value); @include margin(margin-left, $value); }
+}
+
+// Generate responsive padding and margin utilities
+@each $breakpoint, $width in $breakpoints {
+	@media (min-width: $width) {
+		@each $key, $value in $spacings {
+			.#{$breakpoint}\:pt-#{$key} { @include padding(padding-top, $value); }
+			.#{$breakpoint}\:pl-#{$key} { @include padding(padding-left, $value); }
+			.#{$breakpoint}\:pr-#{$key} { @include padding(padding-right, $value); }
+			.#{$breakpoint}\:pb-#{$key} { @include padding(padding-bottom, $value); }
+			.#{$breakpoint}\:px-#{$key} { @include padding(padding-left, $value); @include padding(padding-right, $value); }
+			.#{$breakpoint}\:py-#{$key} { @include padding(padding-top, $value); @include padding(padding-bottom, $value); }
+			.#{$breakpoint}\:p-#{$key}  { @include padding(padding-top, $value); @include padding(padding-right, $value); @include padding(padding-bottom, $value); @include padding(padding-left, $value); }
+
+			.#{$breakpoint}\:mt-#{$key} { @include margin(margin-top, $value); }
+			.#{$breakpoint}\:mr-#{$key} { @include margin(margin-right, $value); }
+			.#{$breakpoint}\:mb-#{$key} { @include margin(margin-bottom, $value); }
+			.#{$breakpoint}\:ml-#{$key} { @include margin(margin-left, $value); }
+			.#{$breakpoint}\:mx-#{$key} { @include margin(margin-left, $value); @include margin(margin-right, $value); }
+			.#{$breakpoint}\:my-#{$key} { @include margin(margin-top, $value); @include margin(margin-bottom, $value); }
+			.#{$breakpoint}\:m-#{$key}  { @include margin(margin-top, $value); @include margin(margin-right, $value); @include margin(margin-bottom, $value); @include margin(margin-left, $value); }
+		}
+	}
+}
