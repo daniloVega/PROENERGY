@@ -1,4 +1,3 @@
-
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const webfontsGenerator = require('@vusion/webfonts-generator');
@@ -34,23 +33,6 @@ module.exports = {
 	output: {
 		filename: 'js/script.js',
 		path: dist,
-		clean: true,
-	},
-	devtool: 'source-map',
-	devServer: {
-		static: {
-			directory: path.resolve(__dirname, 'dist'),
-		},
-		port: 4200,
-		open: true,
-		hot: true,
-
-		watchFiles: ['src/**/*'],
-		compress: true,
-		headers: {
-			'Cache-Control': 'no-store',
-		},
-		historyApiFallback: true,
 	},
 	module: {
 		rules: [
@@ -58,7 +40,6 @@ module.exports = {
 				test: /\.scss$/,
 				use: [
 					MiniCssExtractPlugin.loader,
-					'style-loader',
 					{
 						loader: 'css-loader',
 						options: {
