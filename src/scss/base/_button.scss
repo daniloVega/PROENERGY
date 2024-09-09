@@ -1,0 +1,10 @@
+@use 'variables';
+
+.btn-primary {
+	width: 100%;
+	padding: 16px 100px;
+	background-color: variables.$color-red;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+}
