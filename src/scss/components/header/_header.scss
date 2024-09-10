@@ -32,6 +32,10 @@
 	}
 	@media (min-width: variables.$breakpoint-md) {
 		height: 100px;
+		padding: 20px;
+	}
+	@media (min-width: variables.$breakpoint-lg) {
+		padding: 0 230px;
 	}
 }
 .nav {
@@ -81,7 +85,7 @@
 		.nav__list {
 			display: flex;
 			align-items: center;
-			gap: 26px;
+			gap: 20px;
 		}
 		.nav__item {
 			border: none;
@@ -134,7 +138,7 @@
 
 	.dropdown__arrow--up {
 		display: inline;
-		img {
+		.dropdown__img {
 			transform: rotate(180deg);
 		}
 		@media (min-width: variables.$breakpoint-lg) {
@@ -146,7 +150,7 @@
 	}
 	.dropdown__arrow__desktop--up {
 		display: inline;
-		img {
+		.dropdown__img {
 			transform: rotate(180deg);
 		}
 		@media (max-width: variables.$breakpoint-lg) {
@@ -242,12 +246,8 @@
 .header__img {
 	max-width: 160px;
 	max-height: 48px;
-	@media (min-width: variables.$breakpoint-md) {
-		width: 290px;
-		height: 51px;
-	}
 	@media (min-width: variables.$breakpoint-lg) {
-		width: 340px;
-		height: 61px;
+		min-width: 250px;
+		min-height: 75px;
 	}
 }
