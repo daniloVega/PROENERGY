@@ -7,6 +7,9 @@
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid variables.$color-light-gray;
+	position: fixed;
+	left: 0;
+	right: 0;
 	.hamburger {
 		width: 26px;
 		height: 20px;
@@ -47,7 +50,7 @@
 	transition: right 0.3s ease;
 	display: flex;
 	padding: 25px 20px;
-	height: calc(100vh - 105px);
+	height: calc(100vh - 80px);
 	overflow: auto;
 	@media (min-width: variables.$breakpoint-lg) {
 		overflow: visible;
@@ -173,7 +176,7 @@
 		left: -30%;
 		min-width: 190px;
 		text-align: center;
-		background-color: variables.$color-silver;
+		background-color: variables.$color-silver-primary;
 	}
 }
 .dropdown-menu__item {

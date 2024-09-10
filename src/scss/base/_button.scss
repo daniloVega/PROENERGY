@@ -2,9 +2,14 @@
 
 .btn-primary {
 	width: 100%;
-	padding: 16px 100px;
+	padding-top: 16.5px;
+	padding-bottom: 16.5px;
 	background-color: variables.$color-red;
 	border: none;
 	outline: none;
 	border-radius: 10px;
+	color: variables.$color-white;
+	@media (min-width: variables.$breakpoint-md) {
+		max-width: 201px;
+	}
 }

@@ -2,6 +2,7 @@
 	"defaultSeverity": "warning",
 	"extends": "stylelint-config-standard-scss",
 	"rules": {
+		"media-feature-range-notation": "range",
 		"selector-attribute-quotes": "always",
 		"block-no-empty": true,
 		"color-no-invalid-hex": [
@@ -22,10 +23,7 @@
 		"comment-empty-line-before": [
 			"always",
 			{
-				"ignore": [
-					"stylelint-commands",
-					"after-comment"
-				]
+				"ignore": ["stylelint-commands", "after-comment"]
 			}
 		],
 		"length-zero-no-unit": true,
@@ -43,9 +41,7 @@
 			}
 		],
 		"declaration-property-value-disallowed-list": {
-			"transition": [
-				"/all/"
-			]
+			"transition": ["/all/"]
 		},
 		"declaration-block-no-duplicate-properties": true,
 		"max-nesting-depth": 3,
