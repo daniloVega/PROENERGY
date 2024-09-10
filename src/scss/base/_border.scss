@@ -1,0 +1,21 @@
+@use 'variables';
+
+.border {
+	width: 110px;
+	min-height: 10px;
+	height: 10px;
+	border-radius: 30px;
+	display: block;
+	&--light-blue {
+		background-color: variables.$color-light-blue;
+	}
+	&--white {
+		background-color: variables.$color-white;
+	}
+	&--charcoal {
+		background-color: variables.$color-gray;
+	}
+	&--silver-secondary {
+		background-color: variables.$color-silver-secondary;
+	}
+}

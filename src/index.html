@@ -157,5 +157,40 @@
 			</nav>
 			<div class="header__links"></div>
 		</header>
+		<main id="main">
+			<!-- Home section -->
+			<section class="home">
+				<picture class="home__picture">
+					<source
+						media="(max-width: 767px)"
+						srcset="./assets/images/home.png" />
+					<source
+						media="(min-width: 768px) and (max-width: 1023px)"
+						srcset="./assets/images/home-tablet.png" />
+					<source
+						media="(min-width: 1024px)"
+						srcset="./assets/images/home-desktop.png" />
+					<img
+						class="home__background"
+						src="./assets/images/home.png"
+						alt="Home background image" />
+				</picture>
+				<div class="about pt-2 md:pt-4 pb-2 md:pb-4">
+					<div class="border border--light-blue"></div>
+					<h1 class="about__title">
+						Delivering essential infrastructure services
+					</h1>
+					<p class="about__text">
+						We deliver a range of essential infrastructure services
+						within water, energy, transport and telecommunication in
+						the Europe.
+					</p>
+					<button class="btn-primary">Find out more</button>
+				</div>
+			</section>
+
+
+			
+		</main>
 	</body>
 </html>
