@@ -1,102 +1,130 @@
 @use '../../base/variables';
 .carousel {
-	display: flex;
-	flex-direction: column;
-	background-color: variables.$color-brick;
-	@media (min-width: variables.$breakpoint-lg) {
-		flex-direction: row;
-	}
+  display: flex;
+  flex-direction: column;
+  background-color: variables.$color-brick;
+  @media (min-width: variables.$breakpoint-lg) {
+    flex-direction: row;
+  }
 }
 .carousel__box {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	@media (min-width: variables.$breakpoint-lg) {
-		width: 50%;
-		padding-left: 230px;
-		padding-right: 40px;
-		justify-content: center;
-		max-height: 820px;
-		gap: 30px;
-	}
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media (min-width: variables.$breakpoint-lg) {
+    padding-right: 40px;
+    justify-content: center;
+    max-height: 820px;
+    gap: 30px;
+  }
 }
 .carousel__title {
-	color: variables.$color-white;
+  color: variables.$color-white;
+  @media (min-width: variables.$breakpoint-md) {
+    font-size: 40px;
+	line-height: 50px;
+  }
+  @media (min-width: variables.$breakpoint-lg) {
+    font-size: 46px;
+	line-height: 57.5px;
+  }
 }
 .carousel__text {
-	color: variables.$color-white;
-	&--part-two {
-		margin-top: -10px;
-		@media (min-width: variables.$breakpoint-lg) {
-			margin-top: -16px;
-		}
-	}
+  color: variables.$color-white;
+  @media (min-width: variables.$breakpoint-md) {
+    font-size: 18px;
+	line-height: 28px;
+  }
 }
 .carousel__review {
-	margin-top: 40px;
-	padding: 30px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	background-color: variables.$color-white;
+  margin-top: 40px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: variables.$color-white;
+  @media (min-width: variables.$breakpoint-md) {
+    padding: 40px 50px;
+  }
 }
 .carousel__quotes {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	&--last-quotes {
-		justify-content: flex-end;
-	}
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  &--last-quotes {
+    justify-content: flex-end;
+  }
 }
 .carousel__description {
-	font-size: 20px;
-	line-height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  @media (min-width: variables.$breakpoint-md) {
+    font-size: 26px;
+	line-height: 40px;
+  }
+  @media (min-width: variables.$breakpoint-lg) {
+    font-size: 28px;
+	line-height: 42px;
+  }
 }
 .carousel__person {
-	display: flex;
-	align-items: center;
-	gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 6px;
+  @media (min-width: variables.$breakpoint-md) {
+    padding-top: 10px;
+  }
 }
 .carousel__person__name {
-	display: flex;
-	flex-direction: column;
-	font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  @media (min-width: variables.$breakpoint-md) {
+    font-size: 16px;
+	line-height: 27.07px;
+  }
 }
 .carousel__person__name-span {
-	font-weight: 500;
+  font-weight: 500;
 }
 .carousel__person__img {
-	display: block;
-	width: 80px;
-	height: 80px;
-	border-radius: 50px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
 }
 .carousel__arrows {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 24px;
-	padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 10px;
+  @media (min-width: variables.$breakpoint-md) {
+    justify-content: flex-start;
+    gap: 13px;
+	padding-top: 20px;
+  }
 }
 .carousel__dot {
-	width: 19px;
-	height: 19px;
-	border-radius: 50%;
-	background-color: variables.$color-red;
-	&.active {
-		background-color: lighten(variables.$color-red, 20%);
-		transform: scale(1.2);
-	}
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: variables.$color-red;
+  &.active {
+    background-color: lighten(variables.$color-red, 20%);
+    transform: scale(1.2);
+  }
 }
 
 .carousel__btn {
-	outline: none;
-	background: none;
-	border: none;
-	width: 60px;
-	height: 60px;
+  outline: none;
+  background: none;
+  border: none;
+  width: 60px;
+  height: 60px;
 }
 .carousel__arrow {
-	width: 28px;
-	height: 28px;
+  width: 28px;
+  height: 28px;
 }
