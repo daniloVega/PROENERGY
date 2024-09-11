@@ -66,3 +66,84 @@ document.addEventListener('click', (event) => {
 });
 
 menu.addEventListener('click', (event) => event.stopPropagation());
+const reviews = [
+	{
+		name: 'Orci varius natoque',
+		review: 'Sed dignissim placerat dolor id maxim. Nullam gravida bibendum ipsum, a consequat neque venenatis et.',
+		image: '../assets/images/user-1.png',
+	},
+	{
+		name: 'John Doe',
+		review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
+		image: '../assets/images/user-2.png',
+	},
+	{
+		name: 'Jane Smith',
+		review: 'Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Nec nam aliquam sem et tortor consequat.',
+		image: '../assets/images/user-3.png',
+	},
+];
+let currentIndex = 0;
+
+const nextArrow = document.querySelector('.carousel__arrows .next-arrow');
+const prevArrow = document.querySelector('.carousel__arrows .prev-arrow');
+
+function updateReview() {
+	const reviewerName = document.querySelector('.carousel__person__name-span');
+	const reviewerText = document.querySelector('.carousel__description');
+	const reviewerImage = document.querySelector('.carousel__person__img');
+	const dots = document.querySelectorAll('.carousel__dot');
+
+	// Update review data
+	reviewerName.textContent = reviews[currentIndex].name;
+	reviewerText.textContent = reviews[currentIndex].review;
+	reviewerImage.src = reviews[currentIndex].image;
+
+	// Update dots
+	dots.forEach((dot, index) => {
+		if (index === currentIndex) {
+			dot.style.backgroundColor = '#ff0000'; // Active dot color (red)
+			dot.style.transform = 'scale(1)'; // Active dot is full size
+			dot.style.width = '19px'; // Full size width
+			dot.style.height = '19px'; // Full size height
+		} else {
+			dot.style.backgroundColor = '#ff9999'; // Inactive dot color (lighter red)
+			dot.style.transform = 'scale(0.8)'; // Smaller size for inactive dots
+			dot.style.width = '15px'; // Smaller width for inactive dots
+			dot.style.height = '15px'; // Smaller height for inactive dots
+		}
+	});
+
+	// Disable/Enable arrows based on current index
+	if (currentIndex === 0) {
+		prevArrow.style.opacity = '0.5'; // Make the previous arrow look disabled
+		prevArrow.style.pointerEvents = 'none'; // Disable clicking on it
+	} else {
+		prevArrow.style.opacity = '1'; // Enable the previous arrow
+		prevArrow.style.pointerEvents = 'auto'; // Enable clicking on it
+	}
+
+	if (currentIndex === reviews.length - 1) {
+		nextArrow.style.opacity = '0.5'; // Make the next arrow look disabled
+		nextArrow.style.pointerEvents = 'none'; // Disable clicking on it
+	} else {
+		nextArrow.style.opacity = '1'; // Enable the next arrow
+		nextArrow.style.pointerEvents = 'auto'; // Enable clicking on it
+	}
+}
+nextArrow.addEventListener('click', () => {
+	if (currentIndex < reviews.length - 1) {
+		currentIndex++;
+		updateReview();
+	}
+});
+
+prevArrow.addEventListener('click', () => {
+	if (currentIndex > 0) {
+		currentIndex--;
+		updateReview();
+	}
+});
+
+// Initialize first review
+updateReview();
