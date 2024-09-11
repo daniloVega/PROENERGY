@@ -1,426 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<header class="header">
-			<div class="header__logo">
-				<img
-					class="header__img"
-					src="./assets/images/icons/logo.svg"
-					alt="Site Logo" />
-			</div>
-			<div class="hamburger" id="hamburger">
-				<div class="hamburger__bar"></div>
-				<div class="hamburger__bar"></div>
-				<div class="hamburger__bar"></div>
-			</div>
-			<nav class="nav" id="menu">
-				<ul class="nav__list">
-					<li class="nav__item">
-						<a class="nav__link" href="#">Our Group</a>
-					</li>
-					<li class="nav__item dropdown">
-						<a class="nav__link dropdown__toggle" href="#">
-							Our Divisions
-							<span class="dropdown__arrow dropdown__arrow--down"
-								><img
-									class="dropdown__img"
-									src="./assets/images/icons/arrow_down.svg"
-									alt="expand"
-							/></span>
-							<span class="dropdown__arrow dropdown__arrow--up"
-								><img
-									class="dropdown__img"
-									src="./assets/images/icons/arrow_down.svg"
-									alt="expand"
-							/></span>
-							<span
-								class="dropdown__arrow__desktop dropdown__arrow__desktop--down"
-								><img
-									class="dropdown__img"
-									src="./assets/images/icons/expand_more.svg"
-									alt="expand"
-							/></span>
-							<span
-								class="dropdown__arrow__desktop dropdown__arrow__desktop--up"
-								><img
-									class="dropdown__img"
-									src="./assets/images/icons/expand_more.svg"
-									alt="expand"
-							/></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Our Operations Structure</a
-								>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Water Division</a
-								>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Transport Division</a
-								>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Telecom Division</a
-								>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Energy Division</a
-								>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Plant & Fleet Solutions</a
-								>
-							</li>
-						</ul>
-					</li>
-					<li class="nav__item">
-						<a class="nav__link" href="#">Our People</a>
-					</li>
-					<li class="nav__item dropdown">
-						<a class="nav__link dropdown__toggle" href="#">
-							Investors
-							<span class="dropdown__arrow dropdown__arrow--down"
-								><img
-									class="dropdown__img"
-									src="./assets/images/icons/arrow_down.svg"
-									alt="expand"
-							/></span>
-							<span class="dropdown__arrow dropdown__arrow--up"
-								><img
-									class="dropdown__img"
-									src="./assets/images/icons/arrow_down.svg"
-									alt="expand"
-							/></span>
-							<span
-								class="dropdown__arrow__desktop dropdown__arrow__desktop--down"
-								><img
-									class="dropdown__img"
-									src="./assets/images/icons/expand_more.svg"
-									alt="expand"
-							/></span>
-							<span
-								class="dropdown__arrow__desktop dropdown__arrow__desktop--up"
-								><img
-									class="dropdown__img"
-									src="./assets/images/icons/expand_more.svg"
-									alt="expand"
-							/></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Our Investment Strategy</a
-								>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>IR Contracts</a
-								>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Tax Strategy</a
-								>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Sector Analysis</a
-								>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#"
-									>Annual Reports</a
-								>
-							</li>
-						</ul>
-					</li>
-					<li class="nav__item">
-						<a class="nav__link" href="#">Our News</a>
-					</li>
-					<li class="nav__item">
-						<a class="nav__link" href="#">Contact Us</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="header__links"></div>
-		</header>
-		<main id="main">
-			<!-- Home section -->
-			<section class="home">
-				<picture class="home__picture">
-					<source
-						media="(max-width: 767px)"
-						srcset="./assets/images/home.png" />
-					<source
-						media="(min-width: 768px) and (max-width: 1023px)"
-						srcset="./assets/images/home-tablet.png" />
-					<source
-						media="(min-width: 1024px)"
-						srcset="./assets/images/home-desktop.png" />
-					<img
-						class="home__background"
-						src="./assets/images/home.png"
-						alt="Home background image" />
-				</picture>
-				<div class="about container--mobile">
-					<div class="border border--light-blue"></div>
-					<h1 class="about__title">
-						Delivering essential infrastructure services
-					</h1>
-					<p class="about__text">
-						We deliver a range of essential infrastructure services
-						within water, energy, transport and telecommunication in
-						the Europe.
-					</p>
-					<button class="btn-primary btn-primary--home">
-						Find out more
-						<span
-							><img
-								class="btn-primary__icon"
-								src="./assets/images/icons/btn-forward.svg"
-								alt="Forward Icon"
-						/></span>
-					</button>
-				</div>
-			</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img
+          class="header__img"
+          src="./assets/images/icons/logo.svg"
+          alt="Site Logo"
+        />
+      </div>
+      <div class="hamburger" id="hamburger">
+        <div class="hamburger__bar"></div>
+        <div class="hamburger__bar"></div>
+        <div class="hamburger__bar"></div>
+      </div>
+      <nav class="nav" id="menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Our Group</a>
+          </li>
+          <li class="nav__item dropdown">
+            <a class="nav__link dropdown__toggle" href="#">
+              Our Divisions
+              <span class="dropdown__arrow dropdown__arrow--down"
+                ><img
+                  class="dropdown__img"
+                  src="./assets/images/icons/arrow_down.svg"
+                  alt="expand"
+              /></span>
+              <span class="dropdown__arrow dropdown__arrow--up"
+                ><img
+                  class="dropdown__img"
+                  src="./assets/images/icons/arrow_down.svg"
+                  alt="expand"
+              /></span>
+              <span
+                class="dropdown__arrow__desktop dropdown__arrow__desktop--down"
+                ><img
+                  class="dropdown__img"
+                  src="./assets/images/icons/expand_more.svg"
+                  alt="expand"
+              /></span>
+              <span
+                class="dropdown__arrow__desktop dropdown__arrow__desktop--up"
+                ><img
+                  class="dropdown__img"
+                  src="./assets/images/icons/expand_more.svg"
+                  alt="expand"
+              /></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#"
+                  >Our Operations Structure</a
+                >
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Water Division</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Transport Division</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Telecom Division</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Energy Division</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#"
+                  >Plant & Fleet Solutions</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Our People</a>
+          </li>
+          <li class="nav__item dropdown">
+            <a class="nav__link dropdown__toggle" href="#">
+              Investors
+              <span class="dropdown__arrow dropdown__arrow--down"
+                ><img
+                  class="dropdown__img"
+                  src="./assets/images/icons/arrow_down.svg"
+                  alt="expand"
+              /></span>
+              <span class="dropdown__arrow dropdown__arrow--up"
+                ><img
+                  class="dropdown__img"
+                  src="./assets/images/icons/arrow_down.svg"
+                  alt="expand"
+              /></span>
+              <span
+                class="dropdown__arrow__desktop dropdown__arrow__desktop--down"
+                ><img
+                  class="dropdown__img"
+                  src="./assets/images/icons/expand_more.svg"
+                  alt="expand"
+              /></span>
+              <span
+                class="dropdown__arrow__desktop dropdown__arrow__desktop--up"
+                ><img
+                  class="dropdown__img"
+                  src="./assets/images/icons/expand_more.svg"
+                  alt="expand"
+              /></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#"
+                  >Our Investment Strategy</a
+                >
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">IR Contracts</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Tax Strategy</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Sector Analysis</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Annual Reports</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Our News</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__links"></div>
+    </header>
+    <main id="main">
+      <!-- Home section -->
+      <section class="home">
+        <picture class="home__picture">
+          <source
+            media="(max-width: 767px)"
+            srcset="./assets/images/home.png"
+          />
+          <source
+            media="(min-width: 768px) and (max-width: 1023px)"
+            srcset="./assets/images/home-tablet.png"
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="./assets/images/home-desktop.png"
+          />
+          <img
+            class="home__background"
+            src="./assets/images/home.png"
+            alt="Home background image"
+          />
+        </picture>
+        <div class="about container--mobile">
+          <div class="border border--light-blue"></div>
+          <h1 class="about__title">
+            Delivering essential infrastructure services
+          </h1>
+          <p class="about__text">
+            We deliver a range of essential infrastructure services within
+            water, energy, transport and telecommunication in the Europe.
+          </p>
+          <button class="btn-primary btn-primary--home">
+            Find out more
+            <span
+              ><img
+                class="btn-primary__icon"
+                src="./assets/images/icons/btn-forward.svg"
+                alt="Forward Icon"
+            /></span>
+          </button>
+        </div>
+      </section>
 
-			<!-- ABOUT INFO SECTION -->
-			<section class="info">
-				<div class="info__box container--mobile">
-					<div class="border border--white"></div>
-					<h2 class="info__title">What we do</h2>
-					<p class="info__text">
-						Donec lobortis at orci eu iaculis. Sed nisl nunc,
-						aliquam lacinia luctus id, scelerisque.
-					</p>
-					<p class="info__text info__text--part-two">
-						Aliquam auctor bibendum erat, in sagittis dui iaculis
-						in.
-					</p>
-					<button class="btn-primary btn-primary--about">
-						Discover our divisions<span
-							><img
-								class="btn-primary__icon"
-								src="./assets/images/icons/btn-forward.svg"
-								alt="Forward Icon"
-						/></span>
-					</button>
-				</div>
-				<div class="info__details">
-					<picture class="info__picture">
-						<source
-							media="(max-width: 767px)"
-							srcset="./assets/images/workers-mobile.png" />
-						<source
-							media="(min-width: 768px)"
-							srcset="./assets/images/workers-tablet.png" />
-						<img
-							class="info__background"
-							src="./assets/images/workers-mobile.png"
-							alt="Info background image" />
-					</picture>
+      <!-- ABOUT INFO SECTION -->
+      <section class="info">
+        <div class="info__box container--mobile">
+          <div class="border border--white"></div>
+          <h2 class="info__title">What we do</h2>
+          <p class="info__text">
+            Donec lobortis at orci eu iaculis. Sed nisl nunc, aliquam lacinia
+            luctus id, scelerisque.
+          </p>
+          <p class="info__text info__text--part-two">
+            Aliquam auctor bibendum erat, in sagittis dui iaculis in.
+          </p>
+          <button class="btn-primary btn-primary--about">
+            Discover our divisions<span
+              ><img
+                class="btn-primary__icon"
+                src="./assets/images/icons/btn-forward.svg"
+                alt="Forward Icon"
+            /></span>
+          </button>
+        </div>
+        <div class="info__details">
+          <picture class="info__picture">
+            <source
+              media="(max-width: 767px)"
+              srcset="./assets/images/workers-mobile.png"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/workers-tablet.png"
+            />
+            <img
+              class="info__background"
+              src="./assets/images/workers-mobile.png"
+              alt="Info background image"
+            />
+          </picture>
 
-					<div class="info__departments container--mobile">
-						<div class="info__departments__group">
-							<div class="info__departments__element">
-								<div
-									class="border border--brick border--horizontal"></div>
-								<div class="info__departments__text-box">
-									<p
-										class="info__departments__text info__departments__text--title">
-										ProEnergy
-									</p>
-									<p class="info__departments__text">
-										Energy Division
-									</p>
-								</div>
-							</div>
+          <div class="info__departments container--mobile">
+            <div class="info__departments__group">
+              <div class="info__departments__element">
+                <div class="border border--brick border--horizontal"></div>
+                <div class="info__departments__text-box">
+                  <p
+                    class="info__departments__text info__departments__text--title"
+                  >
+                    ProEnergy
+                  </p>
+                  <p class="info__departments__text">Energy Division</p>
+                </div>
+              </div>
 
-							<div class="info__departments__element">
-								<div
-									class="border border--black border--horizontal"></div>
-								<div class="info__departments__text-box">
-									<p
-										class="info__departments__text info__departments__text--title">
-										ProEnergy
-									</p>
-									<p class="info__departments__text">
-										Plant & Fleet Solutions
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="info__departments__group">
-							<div class="info__departments__element">
-								<div
-									class="border border--light-blue border--horizontal"></div>
-								<div class="info__departments__text-box">
-									<p
-										class="info__departments__text info__departments__text--title">
-										ProEnergy
-									</p>
-									<p class="info__departments__text">
-										Water Division
-									</p>
-								</div>
-							</div>
+              <div class="info__departments__element">
+                <div class="border border--black border--horizontal"></div>
+                <div class="info__departments__text-box">
+                  <p
+                    class="info__departments__text info__departments__text--title"
+                  >
+                    ProEnergy
+                  </p>
+                  <p class="info__departments__text">Plant & Fleet Solutions</p>
+                </div>
+              </div>
+            </div>
+            <div class="info__departments__group">
+              <div class="info__departments__element">
+                <div class="border border--light-blue border--horizontal"></div>
+                <div class="info__departments__text-box">
+                  <p
+                    class="info__departments__text info__departments__text--title"
+                  >
+                    ProEnergy
+                  </p>
+                  <p class="info__departments__text">Water Division</p>
+                </div>
+              </div>
 
-							<div class="info__departments__element">
-								<div
-									class="border border--green border--horizontal"></div>
-								<div class="info__departments__text-box">
-									<p
-										class="info__departments__text info__departments__text--title">
-										ProEnergy
-									</p>
-									<p class="info__departments__text">
-										Transport Division
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="info__departments__element">
-							<div
-								class="border border--silver-secondary border--horizontal"></div>
-							<div class="info__departments__text-box">
-								<p
-									class="info__departments__text info__departments__text--title">
-									ProEnergy
-								</p>
-								<p class="info__departments__text">
-									Telecom Division
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+              <div class="info__departments__element">
+                <div class="border border--green border--horizontal"></div>
+                <div class="info__departments__text-box">
+                  <p
+                    class="info__departments__text info__departments__text--title"
+                  >
+                    ProEnergy
+                  </p>
+                  <p class="info__departments__text">Transport Division</p>
+                </div>
+              </div>
+            </div>
+            <div class="info__departments__element">
+              <div
+                class="border border--silver-secondary border--horizontal"
+              ></div>
+              <div class="info__departments__text-box">
+                <p
+                  class="info__departments__text info__departments__text--title"
+                >
+                  ProEnergy
+                </p>
+                <p class="info__departments__text">Telecom Division</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<!-- SECTION STATS -->
-			<section class="stats container--mobile">
-				<div class="border border--charcoal"></div>
-				<h2 class="stats__title">ESG Stats</h2>
-				<div class="stats__group">
-					<div class="stats__percent">
-						<p class="stats__text">Used</p>
-						<p class="stats__number">83%</p>
-						<p class="stats__text">renewable energy</p>
-					</div>
-					<div class="stats__percent">
-						<p class="stats__text">Recovered</p>
-						<p class="stats__number">77%</p>
-						<p class="stats__text">of waste to avoid landfill</p>
-					</div>
-					<div class="stats__percent">
-						<p class="stats__text">Recorded over</p>
-						<p class="stats__number">15,000%</p>
-						<p class="stats__text">electrical vehicle miles</p>
-					</div>
-				</div>
-				<p class="stats__description">
-					Donec lobortis at orci eu iaculis. Sed nisl nunc, aliquam
-					lacinia luctus id, scelerisque.
-				</p>
-				<button class="btn-primary btn-primary--home">
-					Find out more
-					<span
-						><img
-							class="btn-primary__icon"
-							src="./assets/images/icons/btn-forward.svg"
-							alt="Forward Icon"
-					/></span>
-				</button>
-			</section>
+      <!-- SECTION STATS -->
+      <section class="stats container--mobile">
+        <div class="border border--charcoal"></div>
+        <h2 class="stats__title">ESG Stats</h2>
+        <div class="stats__group">
+          <div class="stats__percent">
+            <p class="stats__text">Used</p>
+            <p class="stats__number">83%</p>
+            <p class="stats__text">renewable energy</p>
+          </div>
+          <div class="stats__percent">
+            <p class="stats__text">Recovered</p>
+            <p class="stats__number">77%</p>
+            <p class="stats__text">of waste to avoid landfill</p>
+          </div>
+          <div class="stats__percent">
+            <p class="stats__text">Recorded over</p>
+            <p class="stats__number">15,000%</p>
+            <p class="stats__text">electrical vehicle miles</p>
+          </div>
+        </div>
+        <p class="stats__description">
+          Donec lobortis at orci eu iaculis. Sed nisl nunc, aliquam lacinia
+          luctus id, scelerisque.
+        </p>
+        <button class="btn-primary btn-primary--home">
+          Find out more
+          <span
+            ><img
+              class="btn-primary__icon"
+              src="./assets/images/icons/btn-forward.svg"
+              alt="Forward Icon"
+          /></span>
+        </button>
+      </section>
 
-			<!-- SECTION CAROUSEL -->
-			<section class="carousel container container--mobile">
-				<div class="carousel__box">
-					<div class="border border--silver-secondary"></div>
-					<h2 class="carousel__title">What we do</h2>
-					<p class="carousel__text">
-						Donec lobortis at orci eu iaculis. Sed nisl nunc,
-						aliquam lacinia luctus id, scelerisque.
-					</p>
-					<button class="btn-primary btn-primary--white">
-						Hear our people’s views<span
-							><img
-								class="btn-primary__icon"
-								src="./assets/images/icons/btn-arrow-red.svg"
-								alt="Forward Icon"
-						/></span>
-					</button>
-				</div>
-				<div class="carousel__review">
-					<div class="carousel__quotes">
-						<img
-							class="carousel__quote"
-							src="./assets/images/icons/first-quote.svg"
-							alt="quote" />
-						<img
-							class="carousel__quote"
-							src="./assets/images/icons/first-quote.svg"
-							alt="quote" />
-					</div>
-					<p class="carousel__description">
-						Sed dignissim placerat dolor id maxim. Nullam gravida
-						bibendum ipsum, a consequat neque venenatis et.
-					</p>
-					<div class="carousel__quotes carousel__quotes--last-quotes">
-						<img
-							class="carousel__quote"
-							src="./assets/images/icons/last-quote.svg"
-							alt="quote" />
-						<img
-							class="carousel__quote"
-							src="./assets/images/icons/last-quote.svg"
-							alt="quote" />
-					</div>
+      <!-- SECTION CAROUSEL -->
+      <section class="carousel container container--mobile">
+        <div class="carousel__box">
+          <div class="border border--silver-secondary"></div>
+          <h2 class="carousel__title">What we do</h2>
+          <p class="carousel__text">
+            Donec lobortis at orci eu iaculis. Sed nisl nunc, aliquam lacinia
+            luctus id, scelerisque.
+          </p>
+          <button class="btn-primary btn-primary--white">
+            Hear our people’s views<span
+              ><img
+                class="btn-primary__icon"
+                src="./assets/images/icons/btn-arrow-red.svg"
+                alt="Forward Icon"
+            /></span>
+          </button>
+        </div>
+        <div class="carousel__review">
+          <div class="carousel__quotes">
+            <img
+              class="carousel__quote"
+              src="./assets/images/icons/first-quote.svg"
+              alt="quote"
+            />
+            <img
+              class="carousel__quote"
+              src="./assets/images/icons/first-quote.svg"
+              alt="quote"
+            />
+          </div>
+          <p class="carousel__description">
+            Sed dignissim placerat dolor id maxim. Nullam gravida bibendum
+            ipsum, a consequat neque venenatis et.
+          </p>
+          <div class="carousel__quotes carousel__quotes--last-quotes">
+            <img
+              class="carousel__quote"
+              src="./assets/images/icons/last-quote.svg"
+              alt="quote"
+            />
+            <img
+              class="carousel__quote"
+              src="./assets/images/icons/last-quote.svg"
+              alt="quote"
+            />
+          </div>
 
-					<div class="carousel__person">
-						<img
-							class="carousel__person__img"
-							src="./assets/images/user-1.png"
-							alt="Reviewer" />
+          <div class="carousel__person">
+            <img
+              class="carousel__person__img"
+              src="./assets/images/user-1.png"
+              alt="Reviewer"
+            />
 
-						<p class="carousel__person__name">
-							<span class="carousel__person__name-span"
-								>Orci varius natoque</span
-							>
-							Magnis dis parturient montes
-						</p>
-					</div>
-					<div class="carousel__arrows">
-						<button class="carousel__btn prev-arrow">
-							<img
-								class="carousel__arrow"
-								src="./assets/images/icons/carousel-back-two.svg"
-								alt="back arrow" />
-						</button>
-						<div class="carousel__dot"></div>
-						<div class="carousel__dot"></div>
-						<div class="carousel__dot"></div>
-						<button class="carousel__btn next-arrow">
-							<img
-								class="carousel__arrow"
-								src="./assets/images/icons/carousel-forward.svg"
-								alt="Forward arrow" />
-						</button>
-					</div>
-				</div>
-			</section>
-		</main>
-	</body>
+            <p class="carousel__person__name">
+              <span class="carousel__person__name-span"
+                >Orci varius natoque</span
+              >
+              Magnis dis parturient montes
+            </p>
+          </div>
+          <div class="carousel__arrows">
+            <button class="carousel__btn prev-arrow">
+              <img
+                class="carousel__arrow"
+                src="./assets/images/icons/carousel-back-two.svg"
+                alt="back arrow"
+              />
+            </button>
+            <div class="carousel__dot"></div>
+            <div class="carousel__dot"></div>
+            <div class="carousel__dot"></div>
+            <button class="carousel__btn next-arrow">
+              <img
+                class="carousel__arrow"
+                src="./assets/images/icons/carousel-forward.svg"
+                alt="Forward arrow"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION CORE -->
+      <section class="core container container--wide container--mobile">
+        <div class="core__header">
+          <div class="border border--charcoal"></div>
+          <h2 class="core__title">Core capabilities</h2>
+        </div>
+		<div class="core__items">
+        <div class="core__item">
+          <button class="core__btn">
+            <span class="core__item-title">Smart Metering</span>
+            <span class="core__icon">+</span>
+          </button>
+        </div>
+        <div class="core__content">
+          <p class="core__text">
+            Working collaboratively with clients to achieve shared business
+            goals and objectives, such as end-user satisfaction, Morrison
+            Utility Services bring commitment, innovation, teamwork and
+            accountability to deliver long-term partnerships.
+          </p>
+          <p class="core__text">
+            Proin dapibus dignissim erat et fermentum. Duis odio eros, lobortis
+            id suscipit eget, efficitur ut dolor. Phasellus convallis semper
+            lacus, sit amet molestie libero. Duis tempus bibendum nisi,
+            vulputate semper erat malesuada sed. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Phasellus convallis semper lacus, sit
+            amet molestie libero. Duis tempus bibendum nisi, vulputate semper
+            erat malesuada sed. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit.
+          </p>
+        </div>
+		<div class="core__item">
+			<button class="core__btn">
+			  <span class="core__item-title">Smart Metering</span>
+			  <span class="core__icon">+</span>
+			</button>
+		  </div>
+		  <div class="core__content">
+			<p class="core__text">
+			  Working collaboratively with clients to achieve shared business
+			  goals and objectives, such as end-user satisfaction, Morrison
+			  Utility Services bring commitment, innovation, teamwork and
+			  accountability to deliver long-term partnerships.
+			</p>
+			<p class="core__text">
+			  Proin dapibus dignissim erat et fermentum. Duis odio eros, lobortis
+			  id suscipit eget, efficitur ut dolor. Phasellus convallis semper
+			  lacus, sit amet molestie libero. Duis tempus bibendum nisi,
+			  vulputate semper erat malesuada sed. Lorem ipsum dolor sit amet,
+			  consectetur adipiscing elit. Phasellus convallis semper lacus, sit
+			  amet molestie libero. Duis tempus bibendum nisi, vulputate semper
+			  erat malesuada sed. Lorem ipsum dolor sit amet, consectetur
+			  adipiscing elit.
+			</p>
+		  </div>
+		  <div class="core__item">
+			<button class="core__btn">
+			  <span class="core__item-title">Smart Metering</span>
+			  <span class="core__icon">+</span>
+			</button>
+		  </div>
+		  <div class="core__content">
+			<p class="core__text">
+			  Working collaboratively with clients to achieve shared business
+			  goals and objectives, such as end-user satisfaction, Morrison
+			  Utility Services bring commitment, innovation, teamwork and
+			  accountability to deliver long-term partnerships.
+			</p>
+			<p class="core__text">
+			  Proin dapibus dignissim erat et fermentum. Duis odio eros, lobortis
+			  id suscipit eget, efficitur ut dolor. Phasellus convallis semper
+			  lacus, sit amet molestie libero. Duis tempus bibendum nisi,
+			  vulputate semper erat malesuada sed. Lorem ipsum dolor sit amet,
+			  consectetur adipiscing elit. Phasellus convallis semper lacus, sit
+			  amet molestie libero. Duis tempus bibendum nisi, vulputate semper
+			  erat malesuada sed. Lorem ipsum dolor sit amet, consectetur
+			  adipiscing elit.
+			</p>
+		  </div>
+		  <div class="core__item">
+			<button class="core__btn">
+			  <span class="core__item-title">Smart Metering</span>
+			  <span class="core__icon">+</span>
+			</button>
+		  </div>
+		  <div class="core__content">
+			<p class="core__text">
+			  Working collaboratively with clients to achieve shared business
+			  goals and objectives, such as end-user satisfaction, Morrison
+			  Utility Services bring commitment, innovation, teamwork and
+			  accountability to deliver long-term partnerships.
+			</p>
+			<p class="core__text">
+			  Proin dapibus dignissim erat et fermentum. Duis odio eros, lobortis
+			  id suscipit eget, efficitur ut dolor. Phasellus convallis semper
+			  lacus, sit amet molestie libero. Duis tempus bibendum nisi,
+			  vulputate semper erat malesuada sed. Lorem ipsum dolor sit amet,
+			  consectetur adipiscing elit. Phasellus convallis semper lacus, sit
+			  amet molestie libero. Duis tempus bibendum nisi, vulputate semper
+			  erat malesuada sed. Lorem ipsum dolor sit amet, consectetur
+			  adipiscing elit.
+			</p>
+		  </div>
+		  <div class="core__item">
+			<button class="core__btn core__btn--last">
+			  <span class="core__item-title">Smart Metering</span>
+			  <span class="core__icon">+</span>
+			</button>
+		  </div>
+		  <div class="core__content">
+			<p class="core__text">
+			  Working collaboratively with clients to achieve shared business
+			  goals and objectives, such as end-user satisfaction, Morrison
+			  Utility Services bring commitment, innovation, teamwork and
+			  accountability to deliver long-term partnerships.
+			</p>
+			<p class="core__text">
+			  Proin dapibus dignissim erat et fermentum. Duis odio eros, lobortis
+			  id suscipit eget, efficitur ut dolor. Phasellus convallis semper
+			  lacus, sit amet molestie libero. Duis tempus bibendum nisi,
+			  vulputate semper erat malesuada sed. Lorem ipsum dolor sit amet,
+			  consectetur adipiscing elit. Phasellus convallis semper lacus, sit
+			  amet molestie libero. Duis tempus bibendum nisi, vulputate semper
+			  erat malesuada sed. Lorem ipsum dolor sit amet, consectetur
+			  adipiscing elit.
+			</p>
+		  </div>
+		</div>
+      </section>
+    </main>
+  </body>
 </html>

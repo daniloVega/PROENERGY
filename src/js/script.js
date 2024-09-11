@@ -147,3 +147,35 @@ prevArrow.addEventListener('click', () => {
 
 // Initialize first review
 updateReview();
+const buttons = document.querySelectorAll('.core__btn');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Get the content related to the clicked button
+    const content = button.parentElement.nextElementSibling;
+    const icon = button.querySelector('.core__icon');
+
+    // Close all other contents and reset their icons
+    buttons.forEach((btn) => {
+      const otherContent = btn.parentElement.nextElementSibling;
+      const otherIcon = btn.querySelector('.core__icon');
+      
+      if (otherContent !== content) {
+        otherContent.style.display = 'none'; // Hide other contents
+        otherIcon.textContent = '+'; // Reset icon to '+'
+        otherIcon.classList.remove('minus'); // Remove minus class
+      }
+    });
+
+    // Toggle the clicked content
+    if (content.style.display === 'block') {
+      content.style.display = 'none'; // Collapse the content
+      icon.textContent = '+'; // Change the icon back to '+'
+      icon.classList.remove('minus'); // Remove minus class
+    } else {
+      content.style.display = 'block'; // Expand the content
+      icon.textContent = '-'; // Change the icon to '-'
+      icon.classList.add('minus'); // Add minus class for larger size
+    }
+  });
+});
