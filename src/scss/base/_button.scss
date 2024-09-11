@@ -21,12 +21,12 @@
 		padding-top: 3px;
 	}
 	&--home {
-		@media (min-width: variables.$breakpoint-lg) {
+		@media (min-width: variables.$breakpoint-md) {
 			width: 201px;
 		}
 	}
 	&--about {
-		@media (min-width: variables.$breakpoint-lg) {
+		@media (min-width: variables.$breakpoint-md) {
 			width: 263px;
 		}
 	}

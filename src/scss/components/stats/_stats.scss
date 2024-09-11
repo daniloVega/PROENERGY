@@ -1,0 +1,96 @@
+@use '../../base/variables';
+.stats {
+	background-color: rgba(62, 163, 151, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	@media (min-width: variables.$breakpoint-lg) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+		gap: 30px;
+	}
+}
+.stats__group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	@media (min-width: variables.$breakpoint-md) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	@media (min-width: variables.$breakpoint-lg) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		gap: 0;
+	}
+	@media (min-width: variables.$breakpoint-xl) {
+		gap: 10px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}
+.stats__percent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+	@media (min-width: variables.$breakpoint-md) {
+		gap: 10px;
+	}
+	@media (min-width: variables.$breakpoint-lg) {
+		gap: 4px;
+	}
+}
+.stats__title {
+	@media (min-width: variables.$breakpoint-md) {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	@media (min-width: variables.$breakpoint-lg) {
+		font-size: 46px;
+		line-height: 57.5px;
+	}
+}
+.stats__number {
+	color: variables.$color-black;
+	font-size: 60px;
+	line-height: 60px;
+	font-family: variables.$font-primary;
+	text-align: center;
+	@media (min-width: variables.$breakpoint-md) {
+		font-size: 67px;
+		line-height: 67px;
+		text-align: center;
+	}
+	@media (min-width: variables.$breakpoint-lg) {
+		font-size: 100px;
+		line-height: 100px;
+	}
+}
+.stats__text {
+	color: variables.$color-black;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: variables.$font-primary;
+	text-align: center;
+	@media (min-width: variables.$breakpoint-lg) {
+		max-width: 142px;
+	}
+	@media (min-width: variables.$breakpoint-lg) {
+		font-size: 20px;
+		line-height: 25px;
+	}
+}
+.stats__description {
+	color: variables.$color-gray;
+	text-align: center;
+	@media (min-width: variables.$breakpoint-md) {
+		max-width: 440px;
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
