@@ -2,14 +2,32 @@
 
 .btn-primary {
 	width: 100%;
-	padding-top: 16.5px;
-	padding-bottom: 16.5px;
+	padding: 16.5px 14px;
 	background-color: variables.$color-red;
 	border: none;
 	outline: none;
 	border-radius: 10px;
 	color: variables.$color-white;
-	@media (min-width: variables.$breakpoint-md) {
-		max-width: 201px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	font-family: variables.$font-primary;
+	gap: 2px;
+	height: 52px;
+	&__icon {
+		width: 20px;
+		height: 20px;
+		padding-top: 3px;
+	}
+	&--home {
+		@media (min-width: variables.$breakpoint-lg) {
+			width: 201px;
+		}
+	}
+	&--about {
+		@media (min-width: variables.$breakpoint-lg) {
+			width: 263px;
+		}
 	}
 }
