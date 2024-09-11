@@ -15,9 +15,9 @@
 }
 .home__picture {
 	width: 100%;
-
 	@media (min-width: variables.$breakpoint-lg) {
 		width: 50%;
+		height: 100vh;
 	}
 }
 
@@ -43,6 +43,7 @@
 	min-height: 300px;
 	&__text {
 		font-size: 18px;
+		line-height: 30px;
 		@media (min-width: variables.$breakpoint-md) {
 			font-size: 20px;
 			line-height: 36px;

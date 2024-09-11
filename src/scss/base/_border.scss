@@ -18,4 +18,18 @@
 	&--silver-secondary {
 		background-color: variables.$color-silver-secondary;
 	}
+	&--brick {
+		background-color: variables.$color-brick;
+	}
+	&--black {
+		background-color: variables.$color-black;
+	}
+	&--green {
+		background-color: variables.$color-olive-green;
+	}
+	&--horizontal {
+		width: 10px;
+		height: 60px;
+		transform: rotate(180deg);
+	}
 }
