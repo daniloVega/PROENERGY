@@ -1,0 +1,100 @@
+@use '../../base/variables';
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	background-color: variables.$color-silver-primary;
+}
+.contact__header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.form__fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	@media (min-width: variables.$breakpoint-md) {
+		flex-direction: row;
+	}
+}
+
+.form__group {
+	&--submit {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-top: 20px;
+		gap: 20px;
+		@media (min-width: variables.$breakpoint-md) {
+			flex-direction: row;
+		}
+	}
+	&--area {
+		margin-top: 20px;
+	}
+}
+
+.form__label {
+	display: block;
+	font-size: 16px;
+	font-family: variables.$font-primary;
+	margin-bottom: 5px;
+	font-weight: 400;
+}
+
+.form__input {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	border: 1px solid variables.$color-gray;
+	font-family: variables.$font-primary;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 1px;
+	text-align: left;
+	height: 40px;
+}
+
+.form__input:focus {
+	outline: none;
+}
+
+.form__input::placeholder,
+.contact__message::placeholder {
+	padding-left: 10px;
+	font-family: variables.$font-primary;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 1px;
+}
+.contact__message {
+	width: 100%;
+	border-radius: 10px;
+	outline: none;
+	border: 1px solid variables.$color-gray;
+	font-family: variables.$font-primary;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 1px;
+	text-align: left;
+	height: 150px;
+}
+.form__box {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	@media (min-width: variables.$breakpoint-md) {
+		width: 50%;
+	}
+}

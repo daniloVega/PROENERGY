@@ -77,10 +77,10 @@
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	padding-top: 6px;
+	padding-top: 16px;
 	position: relative;
 	@media (min-width: variables.$breakpoint-md) {
-		padding-top: 10px;
+		padding-top: 20px;
 	}
 }
 .carousel__person__name {
@@ -106,12 +106,11 @@
 	align-items: center;
 	justify-content: center;
 	gap: 24px;
-	padding-top: 10px;
+	padding-top: 20px;
 	padding-bottom: 30px;
 	@media (min-width: variables.$breakpoint-md) {
 		justify-content: flex-start;
 		gap: 13px;
-		padding-top: 20px;
 		padding-bottom: 40px;
 	}
 	@media (min-width: variables.$breakpoint-lg) {
