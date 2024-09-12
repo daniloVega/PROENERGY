@@ -2,12 +2,18 @@
 
 // Default container with mobile-first approach
 .container {
-	@media (min-width: variables.$breakpoint-lg) {
-		padding: 70px 230px;
-	}
-	&--mobile {
-		@media (max-width: variables.$breakpoint-lg) {
-			padding: 40px 20px;
-		}
+  @media (min-width: variables.$breakpoint-lg) {
+    padding: 70px 230px;
+  }
+
+  &--mobile {
+    @media (max-width: variables.$breakpoint-lg) {
+      padding: 40px 20px;
+    }
+  }
+}
+.container--wide{
+	@media (min-width: variables.$breakpoint-xl) {
+		padding: 70px 480px;
 	}
 }
