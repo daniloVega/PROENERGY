@@ -1,0 +1,74 @@
+@use '../../base/variables';
+.footer__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media (min-width: variables.$breakpoint-md) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	@media (min-width: variables.$breakpoint-lg) {
+		padding: 15px 230px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+.footer__logo {
+	padding-top: 20px;
+	width: 160px;
+	@media (min-width: variables.$breakpoint-md) {
+		padding-top: 0;
+		padding-left: 20px;
+		width: 180px;
+	}
+	@media (min-width: variables.$breakpoint-lg) {
+		padding-left: 0;
+	}
+}
+.footer__box {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	@media (min-width: variables.$breakpoint-md) {
+		align-items: flex-end;
+		gap: 10px;
+	}
+	@media (min-width: variables.$breakpoint-lg) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+.footer__icons {
+	display: flex;
+	align-items: baseline;
+	gap: 30px;
+	@media (min-width: variables.$breakpoint-lg) {
+		margin-left: -120px;
+	}
+}
+
+.footer__links {
+	display: flex;
+	gap: 20px;
+	&__text {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17.5px;
+		font-family: variables.$font-primary;
+		text-decoration: none;
+		color: variables.$color-gray;
+	}
+}
+.footer__copy {
+	padding: 20px;
+	background-color: variables.$color-brick;
+}
+.footer__copy__text {
+	font-size: 12px;
+	line-height: 15px;
+	color: variables.$color-white;
+	font-weight: 500;
+	text-align: center;
+}
