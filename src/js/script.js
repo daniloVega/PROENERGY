@@ -102,33 +102,33 @@ function updateReview() {
 	// Update dots
 	dots.forEach((dot, index) => {
 		if (index === currentIndex) {
-			dot.style.backgroundColor = '#ff0000'; // Active dot color (red)
-			dot.style.transform = 'scale(1)'; // Active dot is full size
-			dot.style.width = '19px'; // Full size width
-			dot.style.height = '19px'; // Full size height
+			dot.style.backgroundColor = '#E73137';
+			dot.style.transform = 'scale(1)';
+			dot.style.width = '19px';
+			dot.style.height = '19px';
 		} else {
-			dot.style.backgroundColor = '#ff9999'; // Inactive dot color (lighter red)
-			dot.style.transform = 'scale(0.8)'; // Smaller size for inactive dots
-			dot.style.width = '15px'; // Smaller width for inactive dots
-			dot.style.height = '15px'; // Smaller height for inactive dots
+			dot.style.backgroundColor = '#ff9999';
+			dot.style.transform = 'scale(0.8)';
+			dot.style.width = '13px';
+			dot.style.height = '13px';
 		}
 	});
 
 	// Disable/Enable arrows based on current index
 	if (currentIndex === 0) {
-		prevArrow.style.opacity = '0.5'; // Make the previous arrow look disabled
-		prevArrow.style.pointerEvents = 'none'; // Disable clicking on it
+		prevArrow.style.opacity = '0.5';
+		prevArrow.style.pointerEvents = 'none';
 	} else {
-		prevArrow.style.opacity = '1'; // Enable the previous arrow
-		prevArrow.style.pointerEvents = 'auto'; // Enable clicking on it
+		prevArrow.style.opacity = '1';
+		prevArrow.style.pointerEvents = 'auto';
 	}
 
 	if (currentIndex === reviews.length - 1) {
-		nextArrow.style.opacity = '0.5'; // Make the next arrow look disabled
-		nextArrow.style.pointerEvents = 'none'; // Disable clicking on it
+		nextArrow.style.opacity = '0.5';
+		nextArrow.style.pointerEvents = 'none';
 	} else {
-		nextArrow.style.opacity = '1'; // Enable the next arrow
-		nextArrow.style.pointerEvents = 'auto'; // Enable clicking on it
+		nextArrow.style.opacity = '1';
+		nextArrow.style.pointerEvents = 'auto';
 	}
 }
 nextArrow.addEventListener('click', () => {
@@ -145,37 +145,45 @@ prevArrow.addEventListener('click', () => {
 	}
 });
 
-// Initialize first review
 updateReview();
 const buttons = document.querySelectorAll('.core__btn');
 
 buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    // Get the content related to the clicked button
-    const content = button.parentElement.nextElementSibling;
-    const icon = button.querySelector('.core__icon');
+	button.addEventListener('click', () => {
+		const content = button.parentElement.nextElementSibling;
+		const icon = button.querySelector('.core__icon');
 
-    // Close all other contents and reset their icons
-    buttons.forEach((btn) => {
-      const otherContent = btn.parentElement.nextElementSibling;
-      const otherIcon = btn.querySelector('.core__icon');
-      
-      if (otherContent !== content) {
-        otherContent.style.display = 'none'; // Hide other contents
-        otherIcon.textContent = '+'; // Reset icon to '+'
-        otherIcon.classList.remove('minus'); // Remove minus class
-      }
-    });
+		buttons.forEach((btn) => {
+			const otherContent = btn.parentElement.nextElementSibling;
+			const otherIcon = btn.querySelector('.core__icon');
 
-    // Toggle the clicked content
-    if (content.style.display === 'block') {
-      content.style.display = 'none'; // Collapse the content
-      icon.textContent = '+'; // Change the icon back to '+'
-      icon.classList.remove('minus'); // Remove minus class
-    } else {
-      content.style.display = 'block'; // Expand the content
-      icon.textContent = '-'; // Change the icon to '-'
-      icon.classList.add('minus'); // Add minus class for larger size
-    }
-  });
+			if (otherContent !== content) {
+				otherContent.classList.remove('core__content--active');
+				otherContent.style.padding = '0 10px';
+				otherIcon.textContent = '+';
+				otherIcon.classList.remove('minus');
+			}
+		});
+
+		if (content.classList.contains('core__content--active')) {
+			content.classList.remove('core__content--active');
+			icon.textContent = '+';
+			icon.classList.remove('minus');
+
+			content.addEventListener(
+				'transitionend',
+				() => {
+					if (!content.classList.contains('core__content--active')) {
+						content.style.padding = '0px 10px';
+					}
+				},
+				{ once: true }
+			);
+		} else {
+			content.style.padding = '16px 10px';
+			content.classList.add('core__content--active');
+			icon.textContent = '-';
+			icon.classList.add('minus');
+		}
+	});
 });
